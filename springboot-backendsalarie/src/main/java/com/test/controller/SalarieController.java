@@ -35,7 +35,7 @@ public class SalarieController {
 	
 	
 	// create salarie rest api
-		@PostMapping("/salaires")
+	@PostMapping("/salaires")
 		public Salarie createSalarie(@RequestBody Salarie salarie) {
 			return salarieRepository.save(salarie);
 		}
