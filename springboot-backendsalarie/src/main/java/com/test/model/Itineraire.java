@@ -1,4 +1,10 @@
 package com.test.model;
 
-public class Itineraire {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Table
+@Entity(name="Itineraire")
+public class Itineraire implements Serializable {
 }

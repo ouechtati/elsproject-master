@@ -98,8 +98,5 @@ public class Salarie implements Serializable {
 		// TODO Auto-generated method stub
 		super.finalize();
 	}
-	
-	
-	
-	
+
 }

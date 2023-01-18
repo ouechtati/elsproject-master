@@ -1,4 +1,10 @@
 package com.test.model;
 
-public class GuidePersonne {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Table
+@Entity(name="GuidePersonne")
+public class GuidePersonne implements Serializable {
 }
