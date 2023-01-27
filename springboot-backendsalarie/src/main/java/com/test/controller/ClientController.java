@@ -18,7 +18,6 @@ import java.util.List;
 @RequestMapping("/client/els/")
 public class ClientController {
 
-
     @Autowired
     ClientRepository clientRepository;
     @GetMapping("/client")
