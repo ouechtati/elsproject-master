@@ -13,6 +13,10 @@ import java.util.Objects;
 public class Destination implements Serializable {
 
     @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private int id;
+
     @Column(name="destination")
     private String destination;
 
@@ -28,12 +32,39 @@ public class Destination implements Serializable {
     @JsonIgnore
     private Client client;
 
-    public Destination(Client client) {
+    public Destination(String destination, String pays, String ville, Client client) {
+        this.destination = destination;
+        this.pays = pays;
+        Ville = ville;
         this.client = client;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public String getPays() {
+        return pays;
+    }
+
+    public String getVille() {
+        return Ville;
     }
 
     public Client getClient() {
         return client;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public void setPays(String pays) {
+        this.pays = pays;
+    }
+
+    public void setVille(String ville) {
+        Ville = ville;
     }
 
     public void setClient(Client client) {
@@ -53,30 +84,25 @@ public class Destination implements Serializable {
         return Objects.hash(destination, pays, Ville, client);
     }
 
-    public String getDestination() {
-        return destination;
+    @Override
+    public String toString() {
+        return "Destination{" +
+                "destination='" + destination + '\'' +
+                ", pays='" + pays + '\'' +
+                ", Ville='" + Ville + '\'' +
+                ", client=" + client +
+                '}';
     }
 
-    public void setDestination(String destination) {
+    public Destination(String destination) {
         this.destination = destination;
     }
 
-    public String getPays() {
-        return pays;
+    public Destination(Client client) {
+        this.client = client;
     }
 
-    public void setPays(String pays) {
-        this.pays = pays;
+    public Destination() {
     }
-
-    public String getVille() {
-        return Ville;
-    }
-
-    public void setVille(String ville) {
-        Ville = ville;
-    }
-
-
-
 }
+

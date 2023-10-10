@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Table
 @Entity(name="Client")
-public class Client  implements Serializable
+public class Client
 {
     @Id
     @GeneratedValue
