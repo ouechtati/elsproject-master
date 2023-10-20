@@ -14,8 +14,8 @@ public class Destination implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "id")
-    private int id;
+    @Column(name = "idDestination")
+    private int idDestination;
 
     @Column(name="destination")
     private String destination;
@@ -26,17 +26,11 @@ public class Destination implements Serializable {
     @Column(name="ville")
     private String Ville;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "client_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private Client client;
 
     public Destination(String destination, String pays, String ville, Client client) {
         this.destination = destination;
         this.pays = pays;
         Ville = ville;
-        this.client = client;
     }
 
     public String getDestination() {
@@ -51,9 +45,6 @@ public class Destination implements Serializable {
         return Ville;
     }
 
-    public Client getClient() {
-        return client;
-    }
 
     public void setDestination(String destination) {
         this.destination = destination;
@@ -67,21 +58,19 @@ public class Destination implements Serializable {
         Ville = ville;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
-    }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Destination that = (Destination) o;
-        return Objects.equals(destination, that.destination) && Objects.equals(pays, that.pays) && Objects.equals(Ville, that.Ville) && Objects.equals(client, that.client);
+        return Objects.equals(destination, that.destination) && Objects.equals(pays, that.pays) && Objects.equals(Ville, that.Ville);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(destination, pays, Ville, client);
+        return Objects.hash(destination, pays, Ville);
     }
 
     @Override
@@ -90,7 +79,6 @@ public class Destination implements Serializable {
                 "destination='" + destination + '\'' +
                 ", pays='" + pays + '\'' +
                 ", Ville='" + Ville + '\'' +
-                ", client=" + client +
                 '}';
     }
 
@@ -98,9 +86,7 @@ public class Destination implements Serializable {
         this.destination = destination;
     }
 
-    public Destination(Client client) {
-        this.client = client;
-    }
+
 
     public Destination() {
     }

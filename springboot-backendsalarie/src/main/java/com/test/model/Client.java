@@ -2,6 +2,8 @@ package com.test.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Table
 @Entity(name="Client")
@@ -9,8 +11,8 @@ public class Client
 {
     @Id
     @GeneratedValue
-    @Column(name = "id")
-    private int id;
+    @Column(name = "idClient")
+    private int idClient;
 
     @Column(name="nom")
     private  String nom;
@@ -21,6 +23,13 @@ public class Client
 
     @Column(name="nationalite")
     private String nationalite;
+
+
+    @ManyToMany
+    @JoinTable( name = "possede",
+            joinColumns = @JoinColumn( name = "idClient" ),
+            inverseJoinColumns = @JoinColumn( name = "idDestination" ) )
+    private List<Destination> destinations = new ArrayList<>();
     public String getNationalite() {
         return nationalite;
     }
@@ -30,11 +39,11 @@ public class Client
     }
 
     public int getId() {
-        return id;
+        return idClient;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idClient = idClient;
     }
     public String getNom() {
         return nom;
@@ -52,8 +61,8 @@ public class Client
         this.email = email;
     }
 
-    public Client(int id) {
-        this.id = id;
+    public Client(int idClient) {
+        this.idClient = idClient;
     }
 
     public Client() {
