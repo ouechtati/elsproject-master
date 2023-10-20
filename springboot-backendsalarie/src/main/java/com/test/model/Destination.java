@@ -6,6 +6,8 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -26,6 +28,11 @@ public class Destination implements Serializable {
     @Column(name="ville")
     private String Ville;
 
+    @ManyToMany
+    @JoinTable( name = "possede",
+            joinColumns = @JoinColumn( name = "idDestination" ),
+            inverseJoinColumns = @JoinColumn( name = "idClient" ) )
+    private List<Client> client = new ArrayList<>();
 
     public Destination(String destination, String pays, String ville, Client client) {
         this.destination = destination;

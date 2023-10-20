@@ -7,8 +7,7 @@ import java.util.List;
 
 @Table
 @Entity(name="Client")
-public class Client
-{
+public class Client {
     @Id
     @GeneratedValue
     @Column(name = "idClient")
@@ -30,6 +29,8 @@ public class Client
             joinColumns = @JoinColumn( name = "idClient" ),
             inverseJoinColumns = @JoinColumn( name = "idDestination" ) )
     private List<Destination> destinations = new ArrayList<>();
+
+
     public String getNationalite() {
         return nationalite;
     }
