@@ -3,14 +3,13 @@ package com.test.controller;
 
 import com.test.execption.ResourceNotFoundException;
 import com.test.model.Client;
-import com.test.model.Salarie;
+
 import com.test.repositories.ClientRepository;
-import com.test.repositories.SalarieRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
