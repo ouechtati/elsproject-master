@@ -16,7 +16,7 @@ public class Destination implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "idDestination")
+    @Column(name = "idDestination",nullable = false)
     private int idDestination;
 
     @Column(name="destination")
@@ -28,11 +28,7 @@ public class Destination implements Serializable {
     @Column(name="ville")
     private String Ville;
 
-    @ManyToMany
-    @JoinTable( name = "possede",
-            joinColumns = @JoinColumn( name = "idDestination" ),
-            inverseJoinColumns = @JoinColumn( name = "idClient" ) )
-    private List<Client> client = new ArrayList<>();
+
 
     public Destination(String destination, String pays, String ville, Client client) {
         this.destination = destination;

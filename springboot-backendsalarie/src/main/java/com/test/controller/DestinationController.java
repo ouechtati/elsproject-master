@@ -30,6 +30,14 @@ public class DestinationController {
     }
 
 
+    /*lister les destinations par id */
+    @GetMapping("/listedestination/{id}")
+    public ResponseEntity<Destination> getDestinationById(@PathVariable Integer id) {
+        Destination destination = destinationRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("ba3 :" + id));
+        return ResponseEntity.ok(destination);
+    }
+
     /*suppression d'une destination*/
     @DeleteMapping("/listedestination/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteDestination(@PathVariable int id){
@@ -39,6 +47,12 @@ public class DestinationController {
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
+    }
+
+
+    @PostMapping("/ajouter/destination")
+    public Destination createDestination(@RequestBody Destination destinations) {
+        return destinationRepository.save(destinations);
     }
 }
 

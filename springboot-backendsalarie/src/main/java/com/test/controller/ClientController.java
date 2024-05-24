@@ -34,7 +34,7 @@ public class ClientController {
     @GetMapping("/listeClient/{id}")
     public ResponseEntity<Client> getClientById(@PathVariable Integer id) {
         Client client = clientRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Client not exist with id :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException("jiji ya 3aloucha :" + id));
         return ResponseEntity.ok(client);
     }
 
@@ -53,7 +53,7 @@ public class ClientController {
 
     /*ajouter un client*/
     @PostMapping("/cl")
-    public Client createEmployee(@RequestBody Client clients) {
+    public Client createClient(@RequestBody Client clients) {
         return clientRepository.save(clients);
     }
 

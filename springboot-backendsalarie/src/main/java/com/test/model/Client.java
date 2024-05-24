@@ -10,7 +10,8 @@ import java.util.List;
 public class Client {
     @Id
     @GeneratedValue
-    @Column(name = "idClient")
+    @Column(name = "idClient" ,nullable = false)
+
     private int idClient;
 
     @Column(name="nom")
@@ -24,11 +25,6 @@ public class Client {
     private String nationalite;
 
 
-    @ManyToMany
-    @JoinTable( name = "possede",
-            joinColumns = @JoinColumn( name = "idClient" ),
-            inverseJoinColumns = @JoinColumn( name = "idDestination" ) )
-    private List<Destination> destinations = new ArrayList<>();
 
 
     public String getNationalite() {
