@@ -16,7 +16,7 @@ import java.util.Map;
 
 @RestController
 /*appel front*/
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RequestMapping("/client/els/")
 public class ClientController {
 
