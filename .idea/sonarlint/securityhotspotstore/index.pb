@@ -11,8 +11,6 @@ Wspringboot-backendsalarie/src/main/java/com/test/repositories/ItineraireReposit
 Xspringboot-backendsalarie/src/main/java/com/test/repositories/DestinationRepository.java,c\9\c9ceac146a93aaa706626daf85ca416aac4b7623
 ˆ
 Xspringboot-backendsalarie/src/main/java/com/test/repositories/GuidePapierRepository.java,3\2\32b6493f43206c39285d7b4fdc164b950ebe2b75
-‚
-Rspringboot-backendsalarie/src/main/java/com/test/repositories/GuideRepository.java,e\b\ebc0369f1bd185ee8896182b700267f98db6a6e8
 Q
 !springboot-backendsalarie/pom.xml,1\a\1ab5255a20799c7cd843725634b45dc2be729240
 ‚
@@ -37,12 +35,6 @@ r
 Bspringboot-backendsalarie/src/main/java/com/test/model/Client.java,5\3\53ad64216ca68bc947096c6091b087e5f50d93be
 v
 Fspringboot-backendsalarie/src/main/java/com/test/model/Itineraire.java,c\7\c72058003de28303b9db549c456907a01595ce85
-y
-Ispringboot-backendsalarie/src/main/java/com/test/model/GuidePersonne.java,7\3\73dc524e207fa77d3a3b180759d6928af443a1a0
-w
-Gspringboot-backendsalarie/src/main/java/com/test/model/GuidePapier.java,7\b\7b64ea0cdd83d739d087681333d5f9dcad32cfea
-q
-Aspringboot-backendsalarie/src/main/java/com/test/model/Guide.java,9\8\98e02ca24cba5bf905cdb266cc3ce41a51a6fdf0
 |
 Lspringboot-backendsalarie/src/main/java/com/test/model/SiteTouristiques.java,2\9\2924fdff61801b2e8f978c5699673b73fb17f321
 w
