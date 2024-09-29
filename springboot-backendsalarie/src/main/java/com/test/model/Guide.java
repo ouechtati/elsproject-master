@@ -3,9 +3,11 @@ package com.test.model;
 
 import javax.persistence.*;
 
-@Inheritance(strategy= InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="Guide_type")
-public abstract class Guide {
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
+
+public  abstract class Guide {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

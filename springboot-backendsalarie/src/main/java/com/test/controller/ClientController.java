@@ -34,7 +34,7 @@ public class ClientController {
     @GetMapping("/listeClient/{id}")
     public ResponseEntity<Client> getClientById(@PathVariable Integer id) {
         Client client = clientRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("jiji ya 3aloucha :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException("foued 7ot ton id :" + id));
         return ResponseEntity.ok(client);
     }
 
