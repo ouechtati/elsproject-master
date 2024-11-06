@@ -14,8 +14,9 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/destination/v1/")
+/*appel front*/
+@CrossOrigin(origins = "*")
 public class DestinationController {
 
 
@@ -34,7 +35,7 @@ public class DestinationController {
     @GetMapping("/listedestination/{id}")
     public ResponseEntity<Destination> getDestinationById(@PathVariable Integer id) {
         Destination destination = destinationRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("ba3 :" + id));
+                .orElseThrow(() -> new ResourceNotFoundException("destination not exist with id :" + id));
         return ResponseEntity.ok(destination);
     }
 

@@ -21,6 +21,17 @@ public class Client {
     @Column(name="nationalite")
     private String nationalite;
 
+    public int getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
+
+
+
 
 
 
@@ -57,6 +68,7 @@ public class Client {
 
     public Client(int idClient) {
         this.idClient = idClient;
+
     }
 
     public Client() {
