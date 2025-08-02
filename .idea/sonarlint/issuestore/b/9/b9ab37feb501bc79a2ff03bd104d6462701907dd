@@ -1,0 +1,10 @@
+
+ˆ
+java:S41653"fRemove this useless assignment; "idClient" already holds the assigned value along all execution paths.(ç±”€şÿÿÿÿ8È—¢§2
+}
+java:S4144."[Update this method so that its implementation is not identical to "getIdClient" on line 24.(»ˆ»¶ùÿÿÿÿ8ô—¢§2
+E
+java:S11722")Remove this unused method parameter "id".(’¹¾
+8Ò—¢§2
+Q
+java:S16563"/Remove or correct this useless self-assignment.(ç±”€şÿÿÿÿ8Û—¢§2
