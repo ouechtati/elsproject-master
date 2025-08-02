@@ -1,10 +1,9 @@
-package com.test.controller;
+package com.salaire.testing.controller;
 
 
-import com.test.execption.ResourceNotFoundException;
-import com.test.model.Client;
-
-import com.test.repositories.ClientRepository;
+import com.salaire.testing.execption.ResourceNotFoundException;
+import com.salaire.testing.model.Client;
+import com.salaire.testing.repositories.ClientRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
